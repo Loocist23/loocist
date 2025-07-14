@@ -29,7 +29,7 @@ export async function POST(req: Request) {
       try {
         const text = await response.text();
         errorDetails = text;
-      } catch (e) {
+      } catch {
         errorDetails = 'Impossible de lire la réponse Brevo.';
       }
 
