@@ -25,12 +25,15 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true });
     } else {
       // Essayons de lire d'abord le JSON, sinon fallback texte brut
-      let errorDetails = 'Erreur inconnue';
+      let errorDetails: string | object = 'Erreur inconnue';
       try {
-        const text = await response.text();
-        errorDetails = text;
+        errorDetails = await response.clone().json();
       } catch {
-        errorDetails = 'Impossible de lire la réponse Brevo.';
+        try {
+          errorDetails = await response.text();
+        } catch {
+          errorDetails = 'Impossible de lire la réponse Brevo.';
+        }
       }
 
       console.error("[Brevo ERROR]", {
