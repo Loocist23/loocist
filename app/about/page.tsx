@@ -11,8 +11,7 @@ export default function AboutPage() {
           <h1 className="text-4xl font-bold mb-4">À propos de moi</h1>
           <p className="text-zinc-400 max-w-2xl mx-auto">
             Je suis Anthony, développeur freelance sous le pseudo <strong>Loocist23</strong>. Je suis basé dans le Gard (30),
-            mais je travaille avec des clients partout en France et à l&apos;international. Depuis le 15 juillet 2025,
-            j&apos;ai lancé ma propre entreprise, <strong>Dev&apos;AZ</strong>.
+            mais je travaille avec des clients partout en France et à l&apos;international.
           </p>
         </div>
 
