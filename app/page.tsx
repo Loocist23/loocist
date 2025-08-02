@@ -40,7 +40,8 @@ export default function Home() {
             <h3 className="text-xl font-semibold">Statut</h3>
           </CardHeader>
           <CardBody className="text-zinc-400">
-            Disponible pour missions freelance, projets web, mobile, ou logiciels métier.
+            Fondateur de Dev&apos;AZ depuis le 15 juillet 2025, disponible pour missions freelance,
+            projets web, mobile, ou logiciels métier.
           </CardBody>
         </NeoCard>
 
