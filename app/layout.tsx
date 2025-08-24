@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import BackgroundGrid from "@/components/BackgroundGrid";
 
 export const metadata: Metadata = {
   title: "Loocist23",
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="flex flex-col min-h-screen">
+        <BackgroundGrid />
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
