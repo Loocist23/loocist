@@ -189,15 +189,15 @@ body {
     #terminal {
         padding: 15px;
     }
-    
+
     #output {
         font-size: 13px;
     }
-    
+
     #prompt {
         font-size: 13px;
     }
-    
+
     #command-input {
         font-size: 13px;
     }
