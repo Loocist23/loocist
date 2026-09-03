@@ -1,0 +1,220 @@
+/* ===== Dev'AZ OS Terminal Theme ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Terminal Colors */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #141414;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent-green: #00ff41;
+    --accent-cyan: #00d4ff;
+    --accent-magenta: #ff2a6d;
+    --accent-yellow: #f9cb40;
+    --accent-orange: #ff7900;
+    --border-glow: rgba(0, 255, 65, 0.3);
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+#terminal {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#output {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#output::-webkit-scrollbar {
+    width: 6px;
+}
+
+#output::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+#output::-webkit-scrollbar-thumb {
+    background: var(--accent-green);
+    border-radius: 3px;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+    min-height: 24px;
+}
+
+#prompt {
+    color: var(--accent-cyan);
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 15px;
+    width: 100%;
+    outline: none;
+    caret-color: var(--accent-green);
+}
+
+#cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: var(--accent-green);
+    animation: blink 1s step-end infinite;
+    margin-left: -2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ===== Boot Animation ===== */
+.boot-line {
+    opacity: 0;
+    animation: fadeIn 0.1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* ===== Command Output Styling ===== */
+.success {
+    color: var(--accent-green);
+}
+
+.error {
+    color: var(--accent-magenta);
+}
+
+.warning {
+    color: var(--accent-yellow);
+}
+
+.info {
+    color: var(--accent-cyan);
+}
+
+.header {
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+.divider {
+    color: var(--text-secondary);
+}
+
+/* ===== Project Listing ===== */
+.project-item {
+    margin: 8px 0;
+    padding: 8px;
+    border-left: 2px solid var(--accent-green);
+    background: rgba(0, 255, 65, 0.05);
+}
+
+.project-item:hover {
+    background: rgba(0, 255, 65, 0.1);
+}
+
+.project-name {
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+
+.project-stack {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+
+/* ===== Skill Tags ===== */
+.skill-tag {
+    display: inline-block;
+    background: rgba(0, 212, 255, 0.15);
+    color: var(--accent-cyan);
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin: 2px;
+    font-size: 0.85em;
+}
+
+/* ===== Contact Info ===== */
+.contact-link {
+    color: var(--accent-green);
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== ASCII Art ===== */
+.ascii-art {
+    color: var(--accent-green);
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1.2;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    #terminal {
+        padding: 15px;
+    }
+    
+    #output {
+        font-size: 13px;
+    }
+    
+    #prompt {
+        font-size: 13px;
+    }
+    
+    #command-input {
+        font-size: 13px;
+    }
+}
+
+/* ===== Focus Styles ===== */
+#command-input:focus {
+    outline: none;
+}
+
+/* ===== Selection ===== */
+::selection {
+    background: rgba(0, 255, 65, 0.3);
+    color: var(--bg-primary);
+}
+
+/* ===== Glow Effect on Active Terminal ===== */
+#terminal:focus-within {
+    box-shadow: 0 0 20px var(--border-glow);
+}
