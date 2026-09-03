@@ -157,7 +157,7 @@ function initTerminal() {
 function bootSequence() {
     terminal.commandInput.disabled = true;
     terminal.cursor.style.display = 'none';
-    
+
     const bootLines = [
         { text: '[Dev\'AZ OS v2.1]', delay: 300, class: 'success' },
         { text: 'Initializing kernel...', delay: 200 },
@@ -168,24 +168,24 @@ function bootSequence() {
         { text: '[   OK   ] Loaded ' + DATA.stats.totalRepos + ' repositories from GitHub', delay: 150, class: 'success' },
         { text: '', delay: 500 },
         { text: '╔════════════════════════════════════════════════════════════╗', delay: 100 },
-        { text: '║                                                           ║', delay: 50 },
-        { text: '║           ██████╗ ██████╗ ███████╗██╗  ██╗                  ║', delay: 50, class: 'accent-green' },
-        { text: '║          ██╔═══██╗██╔══██╗██╔════╝██║ ██╔╝                  ║', delay: 50, class: 'accent-green' },
-        { text: '║          ██║   ██║██████╔╝█████╗  █████╔╝                   ║', delay: 50, class: 'accent-green' },
+        { text: '║                                                            ║', delay: 50 },
+        { text: '║           ██████╗ ██████╗ ███████╗██╗  ██╗                 ║', delay: 50, class: 'accent-green' },
+        { text: '║          ██╔═══██╗██╔══██╗██╔════╝██║ ██╔╝                 ║', delay: 50, class: 'accent-green' },
+        { text: '║          ██║   ██║██████╔╝█████╗  █████╔╝                  ║', delay: 50, class: 'accent-green' },
         { text: '║          ██║   ██║██╔══██╗██╔══╝  ██╔═██╗                  ║', delay: 50, class: 'accent-green' },
-        { text: '║          ╚██████╔╝██║  ██║███████╗██║  ██║                  ║', delay: 50, class: 'accent-green' },
-        { text: '║           ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝                  ║', delay: 50, class: 'accent-green' },
-        { text: '║                                                           ║', delay: 50 },
-        { text: '║         Dev\'AZ Operating System - Terminal Portfolio          ║', delay: 100, class: 'header' },
-        { text: '║           Full-Stack Developer | ' + DATA.stats.totalRepos + ' GitHub Repos              ║', delay: 100, class: 'header' },
-        { text: '║                Welcome to Loocist23 Terminal                 ║', delay: 100, class: 'header' },
-        { text: '║                                                           ║', delay: 50 },
+        { text: '║          ╚██████╔╝██║  ██║███████╗██║  ██║                 ║', delay: 50, class: 'accent-green' },
+        { text: '║           ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝                 ║', delay: 50, class: 'accent-green' },
+        { text: '║                                                            ║', delay: 50 },
+        { text: '║         Dev\'AZ Operating System - Terminal Portfolio       ║', delay: 100, class: 'header' },
+        { text: '║           Full-Stack Developer | ' + DATA.stats.totalRepos + ' GitHub Repos           ║', delay: 100, class: 'header' },
+        { text: '║                Welcome to Loocist23 Terminal               ║', delay: 100, class: 'header' },
+        { text: '║                                                            ║', delay: 50 },
         { text: '╚════════════════════════════════════════════════════════════╝', delay: 100 },
         { text: '', delay: 500 },
         { text: 'System ready. ' + DATA.stats.totalRepos + ' projects loaded.', delay: 200, class: 'success' },
         { text: 'Type "help" for available commands.', delay: 200, class: 'info' }
     ];
-    
+
     let cumulativeDelay = 0;
     bootLines.forEach((line, index) => {
         setTimeout(() => {
@@ -194,7 +194,7 @@ function bootSequence() {
             lineElement.textContent = line.text;
             terminal.output.appendChild(lineElement);
             terminal.output.scrollTop = terminal.output.scrollHeight;
-            
+
             if (index === bootLines.length - 1) {
                 setTimeout(() => {
                     terminal.commandInput.disabled = false;
@@ -210,7 +210,7 @@ function bootSequence() {
 
 // ===== Update Prompt =====
 function updatePrompt() {
-    terminal.prompt.textContent = `${DATA.identity.alias}@dev-az:~$ `;
+    terminal.prompt.textContent = `${DATA.identity.alias}@devaz:~$ `;
 }
 
 // ===== Print to Terminal =====
@@ -219,12 +219,12 @@ function print(text, className = '', newline = true) {
     lineElement.className = className;
     lineElement.innerHTML = text;
     terminal.output.appendChild(lineElement);
-    
+
     if (newline) {
         const br = document.createElement('div');
         terminal.output.appendChild(br);
     }
-    
+
     terminal.output.scrollTop = terminal.output.scrollHeight;
 }
 
@@ -236,24 +236,24 @@ function clearTerminal() {
 
 // ===== Easter Eggs =====
 const easterEggs = [
-    { trigger: 'secret', response: '🤫 Shhh... You found a secret! But there\'s nothing here. Yet. Keep exploring!' },
-    { trigger: 'hire', response: '🎯 <span class="success">I\'m ready to work!</span> Contact me at <span class="accent-cyan">' + DATA.contact.email + '</span> or check my <a href="' + DATA.contact.linkedin + '" target="_blank" class="contact-link">LinkedIn</a>.' },
-    { trigger: 'recruiter', response: '👀 <span class="success">Welcome, recruiter!</span> I have <span class="accent-green">49 repositories on GitHub</span> with experience in <span class="accent-cyan">Full-Stack, AI, and Automation</span>. Type "skills" or "projects" to see my expertise!' },
-    { trigger: 'devaz', response: '🚀 <span class="accent-yellow">Dev\'AZ:</span> Development solutions from A to Z! Founded in July 2025.' },
-    { trigger: 'loocist', response: '👨‍💻 That\'s me! <span class="accent-cyan">Anthony</span>, aka <span class="accent-green">Loocist23</span>, Full-Stack Developer and founder of <span class="accent-yellow">Dev\'AZ</span>.' },
-    { trigger: 'stats', response: '📊 <span class="success">GitHub Stats:</span> ' + DATA.stats.totalRepos + ' repos | ' + DATA.stats.totalStars + '★ | ' + DATA.stats.mainLanguages.length + ' languages | Last activity: ' + DATA.stats.recentActivity },
-    { trigger: 'Anthony', response: '😊 Yes, that\'s my name! Nice to meet you. I\'m a Full-Stack Developer based in France.' },
-    { trigger: '49', response: '🎉 Yes! I have <span class="accent-green">49 public repositories</span> on GitHub. Type "projects" to see the highlights!' },
-    { trigger: 'cybersec', response: '🔒 <span class="success">CyberSec Platform</span> is my latest major project! A professional cybersecurity platform with real-time monitoring. Type "featured" for details.' },
-    { trigger: 'fullstack', response: '💻 <span class="success">Full-Stack Expert!</span> I work with: ' + DATA.about.frontend.slice(0, 3).join(', ') + ' (frontend) + ' + DATA.about.backend.slice(0, 3).join(', ') + ' (backend) + Databases + Cloud.' },
-    { trigger: 'python', response: '🐍 <span class="success">Python is one of my main languages!</span> Used in: PowerAudit, FakeInfo-Filler, Echo Assistant, IoT projects, and many scripts.' }
+    { trigger: 'secret', response: 'Shhh... You found a secret! But there\'s nothing here. Yet. Keep exploring!' },
+    { trigger: 'hire', response: '<span class="success">I\'m ready to work!</span> Contact me at <span class="accent-cyan">' + DATA.contact.email + '</span> or check my <a href="' + DATA.contact.linkedin + '" target="_blank" class="contact-link">LinkedIn</a>.' },
+    { trigger: 'recruiter', response: '<span class="success">Welcome, recruiter!</span> I have <span class="accent-green">49 repositories on GitHub</span> with experience in <span class="accent-cyan">Full-Stack, AI, and Automation</span>. Type "skills" or "projects" to see my expertise!' },
+    { trigger: 'devaz', response: '<span class="accent-yellow">Dev\'AZ:</span> Development solutions from A to Z! Founded in July 2025.' },
+    { trigger: 'loocist', response: 'That\'s me! <span class="accent-cyan">Anthony</span>, aka <span class="accent-green">Loocist23</span>, Full-Stack Developer and founder of <span class="accent-yellow">Dev\'AZ</span>.' },
+    { trigger: 'stats', response: '<span class="success">GitHub Stats:</span> ' + DATA.stats.totalRepos + ' repos | ' + DATA.stats.totalStars + '★ | ' + DATA.stats.mainLanguages.length + ' languages | Last activity: ' + DATA.stats.recentActivity },
+    { trigger: 'Anthony', response: 'Yes, that\'s my name! Nice to meet you. I\'m a Full-Stack Developer based in France.' },
+    { trigger: '49', response: 'Yes! I have <span class="accent-green">49 public repositories</span> on GitHub. Type "projects" to see the highlights!' },
+    { trigger: 'cybersec', response: '<span class="success">CyberSec Platform</span> is my latest major project! A professional cybersecurity platform with real-time monitoring. Type "featured" for details.' },
+    { trigger: 'fullstack', response: '<span class="success">Full-Stack Expert!</span> I work with: ' + DATA.about.frontend.slice(0, 3).join(', ') + ' (frontend) + ' + DATA.about.backend.slice(0, 3).join(', ') + ' (backend) + Databases + Cloud.' },
+    { trigger: 'python', response: '<span class="success">Python is one of my main languages!</span> Used in: PowerAudit, FakeInfo-Filler, Echo Assistant, IoT projects, and many scripts.' }
 ];
 
 // ===== Show Easter Eggs Hint =====
 function showEasterEggsHint() {
     print('');
-    print('💡 Hidden commands discovered! Try these:', 'info');
-    print('  secret, hire, recruiter, devaz, stats, cybersec, fullstack, python, 49, Anthony', 'text-secondary');
+    print('Hidden commands discovered! Try these:', 'info');
+    print('secret, hire, recruiter, devaz, stats, cybersec, fullstack, python, 49, Anthony', 'text-secondary');
     print('');
 }
 
@@ -282,18 +282,18 @@ const commands = {
             { cmd: 'echo <text>', desc: 'Display custom text' },
             { cmd: 'languages', desc: 'List all programming languages used' }
         ];
-        
+
         cmdList.forEach(item => {
             print(`  <span class="info">${item.cmd.padEnd(15)}</span> ${item.desc}`);
         });
         print('');
-        
+
         // Show easter eggs hint after 3 help commands
         if (helpCount >= 3) {
             showEasterEggsHint();
         }
     },
-    
+
     whoami: () => {
         print('┌─────────────────────────────────────────────────────────────────┐', 'header');
         print(`│ User:    <span class="accent-cyan">${DATA.identity.name}</span>`, '');
@@ -304,7 +304,7 @@ const commands = {
         print(`│ Status:  <span class="success">Available for freelance missions</span>`, '');
         print('└─────────────────────────────────────────────────────────────────┘', 'header');
     },
-    
+
     about: () => {
         print(DATA.identity.name, 'header');
         print('─'.repeat(DATA.identity.name.length), 'divider');
@@ -318,7 +318,7 @@ const commands = {
         print('');
         print('🎯 Mission: ' + DATA.about.objective, 'success');
     },
-    
+
     github: () => {
         print('═══════════════════════════════════════════════════════════', 'header');
         print('                      GITHUB PROFILE STATS', 'header');
@@ -332,13 +332,13 @@ const commands = {
         print('');
         print('GitHub Profile: <a href="' + DATA.contact.github + '" target="_blank" class="contact-link">' + DATA.contact.github + '</a>');
     },
-    
+
     skills: () => {
         print('═══════════════════════════════════════════════════════════', 'header');
         print('                    SKILL SET & TECHNOLOGIES', 'header');
         print('═══════════════════════════════════════════════════════════', 'header');
         print('');
-        
+
         const categories = [
             { name: '🌐 Frontend', items: DATA.about.frontend },
             { name: '🏗️ Backend', items: DATA.about.backend },
@@ -350,17 +350,17 @@ const commands = {
             { name: '☁️ DevOps/Cloud', items: DATA.about.devops.concat(DATA.about.cloud) },
             { name: '🔧 Tools', items: DATA.about.tools }
         ];
-        
+
         categories.forEach(cat => {
             print(`${cat.name}:`, 'accent-cyan');
             const tags = cat.items.map(item => `<span class="skill-tag">${item}</span>`).join('');
             print(tags);
             print('');
         });
-        
+
         print('💡 Proficient in ' + DATA.stats.mainLanguages.length + '+ programming languages across ' + DATA.stats.totalRepos + ' repositories', 'success');
     },
-    
+
     languages: () => {
         print('Programming Languages Used:', 'header');
         print('');
@@ -370,13 +370,13 @@ const commands = {
         print('');
         print('Total: ' + DATA.stats.mainLanguages.length + ' languages across ' + DATA.stats.totalRepos + ' repositories', 'info');
     },
-    
+
     projects: () => {
         print('═══════════════════════════════════════════════════════════', 'header');
         print('                      FEATURED PROJECTS (' + DATA.projects.length + ')', 'header');
         print('═══════════════════════════════════════════════════════════', 'header');
         print('');
-        
+
         DATA.projects.forEach((project, index) => {
             const highlight = project.highlight ? '<span class="success">★ </span>' : '';
             const year = project.year ? ` <span class="text-secondary">(${project.year})</span>` : '';
@@ -386,26 +386,26 @@ const commands = {
             print(`   └─ <a href="${project.link}" target="_blank" class="contact-link">${project.link}</a>`);
             print('');
         });
-        
+
         print('Type "project <id>" for details. Try "featured" for the CyberSec Platform!', 'info');
     },
-    
+
     project: (args) => {
         if (!args[0]) {
             print('Usage: project <id> (1-' + DATA.projects.length + ')', 'error');
             return;
         }
-        
+
         const id = parseInt(args[0]);
         if (isNaN(id) || id < 1 || id > DATA.projects.length) {
             print(`Error: Project ID must be between 1 and ${DATA.projects.length}`, 'error');
             return;
         }
-        
+
         const project = DATA.projects[id - 1];
         const highlight = project.highlight ? '<span class="success">★ Featured Project</span>' : '';
         const year = project.year ? ` | ${project.year}` : '';
-        
+
         print('═══════════════════════════════════════════════════════════', 'header');
         print(`  ${project.emoji} ${project.name} ${highlight}${year}`, 'header');
         print('═══════════════════════════════════════════════════════════', 'header');
@@ -416,7 +416,7 @@ const commands = {
         print(`Repository: <a href="${project.link}" target="_blank" class="contact-link">${project.link}</a>`);
         print('');
     },
-    
+
     featured: () => {
         const p = DATA.featuredProject;
         print('═══════════════════════════════════════════════════════════', 'header');
@@ -433,7 +433,7 @@ const commands = {
         print('');
         print('This is the most recent and technically advanced project.', 'success');
     },
-    
+
     contact: () => {
         print('═══════════════════════════════════════════════════════════', 'header');
         print('                     CONTACT INFORMATION', 'header');
@@ -448,7 +448,7 @@ const commands = {
         print('✅ Open for: Freelance missions | Full-time opportunities | Technical consulting', 'success');
         print('✅ Specialties: Full-Stack Development | AI Integration | System Automation', 'success');
     },
-    
+
     services: () => {
         print('Professional Services:', 'header');
         print('');
@@ -458,7 +458,7 @@ const commands = {
         print('');
         print('Need something custom? Let\'s discuss your project!', 'info');
     },
-    
+
     legal: () => {
         print('═══════════════════════════════════════════════════════════', 'header');
         print('                      LEGAL INFORMATION', 'header');
@@ -474,7 +474,7 @@ const commands = {
         print('');
         print(DATA.legal.copyright);
     },
-    
+
     neofetch: () => {
         const ascii = `
   ██████╗ ██████╗ ███████╗██╗  ██╗
@@ -499,11 +499,11 @@ const commands = {
         print('Shell: /bin/dev-az', 'info');
         print('Uptime: Since 2025', 'info');
     },
-    
+
     clear: () => {
         clearTerminal();
     },
-    
+
     exit: () => {
         print('Logging out...', 'warning');
         print('');
@@ -511,13 +511,13 @@ const commands = {
             window.location.reload();
         }, 500);
     },
-    
+
     date: () => {
         const now = new Date();
-        const options = { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
             day: 'numeric',
             hour: '2-digit',
             minute: '2-digit',
@@ -525,7 +525,7 @@ const commands = {
         };
         print(now.toLocaleDateString('fr-FR', options), 'info');
     },
-    
+
     echo: (args) => {
         if (args.length > 0) {
             print(args.join(' '));
@@ -535,35 +535,35 @@ const commands = {
     }
 };
 
-// ===== Handle Command ===== 
+// ===== Handle Command =====
 function handleCommand() {
     const input = terminal.commandInput.value.trim();
-    
+
     if (input === '') {
         terminal.commandInput.value = '';
         return;
     }
-    
+
     // Add to history
     terminal.history.push(input);
     terminal.historyIndex = terminal.history.length;
-    
+
     // Print command
     print(terminal.prompt.textContent.trim() + input);
     terminal.commandInput.value = '';
-    
+
     // Parse command
     const parts = input.split(' ');
     const command = parts[0].toLowerCase();
     const args = parts.slice(1);
-    
+
     // Check easter eggs first
     const egg = easterEggs.find(ee => input.toLowerCase() === ee.trigger);
     if (egg) {
         print(egg.response, 'success');
         return;
     }
-    
+
     // Execute command
     if (commands[command]) {
         commands[command](args);
@@ -571,12 +571,12 @@ function handleCommand() {
         print(`Command not found: ${command}`, 'error');
         print('Type "help" for available commands.', 'info');
     }
-    
+
     // Scroll to bottom
     terminal.output.scrollTop = terminal.output.scrollHeight;
 }
 
-// ===== Keyboard Events ===== 
+// ===== Keyboard Events =====
 function setupEventListeners() {
     terminal.commandInput.addEventListener('keydown', (e) => {
         // Handle Enter
@@ -584,28 +584,28 @@ function setupEventListeners() {
             e.preventDefault();
             handleCommand();
         }
-        
+
         // Handle Up Arrow (history)
         if (e.key === 'ArrowUp' && terminal.historyIndex > 0) {
             e.preventDefault();
             terminal.historyIndex--;
             terminal.commandInput.value = terminal.history[terminal.historyIndex];
         }
-        
+
         // Handle Down Arrow (history)
         if (e.key === 'ArrowDown' && terminal.historyIndex < terminal.history.length - 1) {
             e.preventDefault();
             terminal.historyIndex++;
             terminal.commandInput.value = terminal.history[terminal.historyIndex];
         }
-        
+
         // Handle Tab (auto-complete)
         if (e.key === 'Tab') {
             e.preventDefault();
             const input = terminal.commandInput.value;
             const availableCommands = Object.keys(commands);
             const matching = availableCommands.filter(cmd => cmd.startsWith(input));
-            
+
             if (matching.length === 1) {
                 terminal.commandInput.value = matching[0];
             } else if (matching.length > 1) {
@@ -616,11 +616,11 @@ function setupEventListeners() {
             }
         }
     });
-    
+
     terminal.commandInput.addEventListener('focus', () => {
         terminal.cursor.style.display = 'inline-block';
     });
-    
+
     terminal.commandInput.addEventListener('blur', () => {
         terminal.cursor.style.display = 'none';
     });
