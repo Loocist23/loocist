@@ -17,14 +17,14 @@ const DATA = {
     intro: 'Passionné de développement avec +49 projets open-source sur GitHub. Je crée des applications robustes, modernes et innovantes en combinant expertise technique et vision produit.',
     objective: 'Livrer des solutions qui résolvent de vrais problèmes, avec du code propre, maintenable et scalable.',
     services: [
-      '🏗️ Développement Full-Stack (Web & Mobile)',
-      '🔧 Solutions d\'automatisation et scripts métiers',
-      '🤖 Projets IA/ML et traitement de données',
-      '📱 Applications mobile cross-platform (Flutter)',
-      '🌐 Plateformes web modernes (React, Next.js, Vue)',
-      '🛡️ Solutions de cybersécurité et audit système',
-      '📊 Outils internes et dashboards pour entreprises',
-      '🎯 Consulting technique et accompagnement projet'
+      'Développement Full-Stack (Web & Mobile)',
+      'Solutions d\'automatisation et scripts métiers',
+      'Projets IA/ML et traitement de données',
+      'Applications mobile cross-platform (Flutter)',
+      'Plateformes web modernes (React, Next.js, Vue)',
+      'Solutions de cybersécurité et audit système',
+      'Outils internes et dashboards pour entreprises',
+      'Consulting technique et accompagnement projet'
     ],
     frontend: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'JavaScript', 'HTML5/CSS3', 'TailwindCSS'],
     backend: ['Node.js', 'Express', 'Python (FastAPI/Flask/Django)', 'C# (.NET)', 'PHP', 'Groovy'],
@@ -40,7 +40,7 @@ const DATA = {
   projects: [
     {
       id: 1,
-      emoji: '🔒',
+      emoji: '',
       name: 'CyberSec Platform',
       description: 'Plateforme complète de cybersécurité avec gestion des vulnérabilités, monitoring et alertes en temps réel. Solution professionnelle pour les entreprises.',
       stack: 'TypeScript • Node.js • React • Security APIs • Real-time Monitoring',
@@ -50,7 +50,7 @@ const DATA = {
     },
     {
       id: 2,
-      emoji: '🚀',
+      emoji: '',
       name: 'MinimalistLauncher',
       description: 'Lanceur d\'applications minimaliste et ultra-rapide. Conçu pour une expérience utilisateur fluide avec un design épuré et des performances optimales.',
       stack: 'HTML • CSS • JavaScript • PWA • Performance Optimized',
@@ -60,7 +60,7 @@ const DATA = {
     },
     {
       id: 3,
-      emoji: '🧮',
+      emoji: '',
       name: 'Calculators Suite',
       description: 'Suite complète de calculatrices en ligne avec frontend moderne et API backend. Architecture microservices avec plusieurs implémentations (JS & Python).',
       stack: 'JavaScript • TypeScript • Python • FastAPI • React • Microservices',
@@ -70,7 +70,7 @@ const DATA = {
     },
     {
       id: 4,
-      emoji: '🤖',
+      emoji: '',
       name: 'Stat-GPT',
       description: 'Projet intégrant des capacités d\'IA générative pour l\'analyse statistique et la visualisation de données. Interface intuitive avec traitement en temps réel.',
       stack: 'JavaScript • AI APIs • Data Visualization • Statistical Analysis • ChatGPT Integration',
@@ -80,7 +80,7 @@ const DATA = {
     },
     {
       id: 5,
-      emoji: '🔍',
+      emoji: '',
       name: 'Hackathon IA - Voyages',
       description: 'Solution full-stack développée lors d\'un hackathon : système de recommandation de voyages intelligente utilisant l\'IA pour personnaliser les itinéraires.',
       stack: 'TypeScript • JavaScript • AI/ML • Recommendation Engine • Full-Stack',
@@ -90,7 +90,7 @@ const DATA = {
     },
     {
       id: 6,
-      emoji: '🧩',
+      emoji: '',
       name: 'FakeInfo-Filler',
       description: 'Extension Chrome/Firefox open-source (⭐1) pour générer et remplir automatiquement des formulaires avec des données réalistes. Idéal pour les tests et le développement.',
       stack: 'JavaScript • WebExtension API • HTML/CSS • Fake Data Generation',
@@ -100,7 +100,7 @@ const DATA = {
     },
     {
       id: 7,
-      emoji: '📊',
+      emoji: '',
       name: 'PowerAudit (Shell Edition)',
       description: 'Script Bash open-source (⭐1) ultra-léger pour auditer des machines Linux. Génère des rapports détaillés en CSV/JSON sans dépendances. Compatible avec toutes les distributions.',
       stack: 'Bash • Shell • Linux CLI • System Audit • CSV/JSON Export',
@@ -140,17 +140,17 @@ const DATA = {
 
 // Easter Eggs
 const EASTER_EGGS = [
-  { trigger: 'secret', response: '🤫 Shhh... You found a secret! But there\'s nothing here. Yet. Keep exploring!' },
-  { trigger: 'hire', response: '🎯 I\'m ready to work! Contact me at ' + DATA.contact.email + ' or check my <a href="' + DATA.contact.linkedin + '" target="_blank" class="contact-link">LinkedIn</a>.' },
-  { trigger: 'recruiter', response: '👀 Welcome, recruiter! I have 49 repositories on GitHub with experience in Full-Stack, AI, and Automation. Type "skills" or "projects" to see my expertise!' },
-  { trigger: 'devaz', response: '🚀 Dev\'AZ: Development solutions from A to Z! Founded in July 2025.' },
-  { trigger: 'loocist', response: '👨‍💻 That\'s me! Anthony, aka Loocist23, Full-Stack Developer and founder of Dev\'AZ.' },
-  { trigger: 'stats', response: '📊 GitHub Stats: ' + DATA.stats.totalRepos + ' repos | ' + DATA.stats.totalStars + '★ | ' + DATA.stats.mainLanguages.length + ' languages | Last activity: ' + DATA.stats.recentActivity },
-  { trigger: 'Anthony', response: '😊 Yes, that\'s my name! Nice to meet you. I\'m a Full-Stack Developer based in France.' },
-  { trigger: '49', response: '🎉 Yes! I have 49 public repositories on GitHub. Type "projects" to see the highlights!' },
-  { trigger: 'cybersec', response: '🔒 CyberSec Platform is my latest major project! A professional cybersecurity platform with real-time monitoring. Type "featured" for details.' },
-  { trigger: 'fullstack', response: '💻 Full-Stack Expert! I work with: ' + DATA.about.frontend.slice(0, 3).join(', ') + ' (frontend) + ' + DATA.about.backend.slice(0, 3).join(', ') + ' (backend) + Databases + Cloud.' },
-  { trigger: 'python', response: '🐍 Python is one of my main languages! Used in: PowerAudit, FakeInfo-Filler, Echo Assistant, IoT projects, and many scripts.' }
+  { trigger: 'secret', response: 'Shhh... You found a secret! But there\'s nothing here. Yet. Keep exploring!' },
+  { trigger: 'hire', response: 'I\'m ready to work! Contact me at ' + DATA.contact.email + ' or check my <a href="' + DATA.contact.linkedin + '" target="_blank" class="contact-link">LinkedIn</a>.' },
+  { trigger: 'recruiter', response: 'Welcome, recruiter! I have 49 repositories on GitHub with experience in Full-Stack, AI, and Automation. Type "skills" or "projects" to see my expertise!' },
+  { trigger: 'devaz', response: 'Dev\'AZ: Development solutions from A to Z! Founded in July 2025.' },
+  { trigger: 'loocist', response: 'That\'s me! Anthony, aka Loocist23, Full-Stack Developer and founder of Dev\'AZ.' },
+  { trigger: 'stats', response: 'GitHub Stats: ' + DATA.stats.totalRepos + ' repos | ' + DATA.stats.totalStars + '★ | ' + DATA.stats.mainLanguages.length + ' languages | Last activity: ' + DATA.stats.recentActivity },
+  { trigger: 'Anthony', response: 'Yes, that\'s my name! Nice to meet you. I\'m a Full-Stack Developer based in France.' },
+  { trigger: '49', response: 'Yes! I have 49 public repositories on GitHub. Type "projects" to see the highlights!' },
+  { trigger: 'cybersec', response: 'CyberSec Platform is my latest major project! A professional cybersecurity platform with real-time monitoring. Type "featured" for details.' },
+  { trigger: 'fullstack', response: 'Full-Stack Expert! I work with: ' + DATA.about.frontend.slice(0, 3).join(', ') + ' (frontend) + ' + DATA.about.backend.slice(0, 3).join(', ') + ' (backend) + Databases + Cloud.' },
+  { trigger: 'python', response: 'Python is one of my main languages! Used in: PowerAudit, FakeInfo-Filler, Echo Assistant, IoT projects, and many scripts.' }
 ];
 
 export default function TerminalPortfolio() {
@@ -161,21 +161,23 @@ export default function TerminalPortfolio() {
   const [helpCount, setHelpCount] = useState(0);
   const [isBooting, setIsBooting] = useState(true);
   const [showCursor, setShowCursor] = useState(false);
-  
+
   const outputRef = useRef(null);
   const inputRef = useRef(null);
-  
+  const bootDone = useRef(false);
+  const isHandlingCommand = useRef(false);
+
   // Scroll to bottom
   const scrollToBottom = useCallback(() => {
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }
   }, []);
-  
+
   useEffect(() => {
     scrollToBottom();
   }, [outputLines]);
-  
+
   // Print to terminal
   const print = useCallback((text, className = '', newline = true) => {
     setOutputLines(prev => {
@@ -191,25 +193,25 @@ export default function TerminalPortfolio() {
       return newLines;
     });
   }, []);
-  
+
   // Clear terminal
   const clearTerminal = useCallback(() => {
     setOutputLines([{ text: 'Terminal cleared. Type "help" for available commands.', className: 'info' }]);
   }, []);
-  
+
   // Update prompt
   const getPrompt = useCallback(() => {
-    return `${DATA.identity.alias}@dev-az:~$ `;
+    return `${DATA.identity.alias}@devaz:~$ `;
   }, []);
-  
+
   // Show easter eggs hint
   const showEasterEggsHint = useCallback(() => {
     print('');
-    print('💡 Hidden commands discovered! Try these:', 'info');
-    print('  secret, hire, recruiter, devaz, stats, cybersec, fullstack, python, 49, Anthony', 'text-secondary');
+    print('Hidden commands discovered! Try these:', 'info');
+    print('secret, hire, recruiter, devaz, stats, cybersec, fullstack, python, 49, Anthony', 'text-secondary');
     print('');
   }, [print]);
-  
+
   // Boot sequence
   const runBootSequence = useCallback(() => {
     const bootLines = [
@@ -222,29 +224,29 @@ export default function TerminalPortfolio() {
       { text: '[   OK   ] Loaded ' + DATA.stats.totalRepos + ' repositories from GitHub', delay: 150, className: 'success' },
       { text: '', delay: 500, className: '' },
       { text: '╔════════════════════════════════════════════════════════════╗', delay: 100, className: '' },
-      { text: '║                                                           ║', delay: 50, className: '' },
-      { text: '║           ██████╗ ██████╗ ███████╗██╗  ██╗                  ║', delay: 50, className: 'accent-green' },
-      { text: '║          ██╔═══██╗██╔══██╗██╔════╝██║ ██╔╝                  ║', delay: 50, className: 'accent-green' },
-      { text: '║          ██║   ██║██████╔╝█████╗  █████╔╝                   ║', delay: 50, className: 'accent-green' },
+      { text: '║                                                            ║', delay: 50, className: '' },
+      { text: '║           ██████╗ ██████╗ ███████╗██╗  ██╗                 ║', delay: 50, className: 'accent-green' },
+      { text: '║          ██╔═══██╗██╔══██╗██╔════╝██║ ██╔╝                 ║', delay: 50, className: 'accent-green' },
+      { text: '║          ██║   ██║██████╔╝█████╗  █████╔╝                  ║', delay: 50, className: 'accent-green' },
       { text: '║          ██║   ██║██╔══██╗██╔══╝  ██╔═██╗                  ║', delay: 50, className: 'accent-green' },
-      { text: '║          ╚██████╔╝██║  ██║███████╗██║  ██║                  ║', delay: 50, className: 'accent-green' },
-      { text: '║           ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝                  ║', delay: 50, className: 'accent-green' },
-      { text: '║                                                           ║', delay: 50, className: '' },
-      { text: '║         Dev\'AZ Operating System - Terminal Portfolio          ║', delay: 100, className: 'header' },
-      { text: '║           Full-Stack Developer | ' + DATA.stats.totalRepos + ' GitHub Repos              ║', delay: 100, className: 'header' },
-      { text: '║                Welcome to Loocist23 Terminal                 ║', delay: 100, className: 'header' },
-      { text: '║                                                           ║', delay: 50, className: '' },
+      { text: '║          ╚██████╔╝██║  ██║███████╗██║  ██║                 ║', delay: 50, className: 'accent-green' },
+      { text: '║           ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝                 ║', delay: 50, className: 'accent-green' },
+      { text: '║                                                            ║', delay: 50, className: '' },
+      { text: '║         Dev\'AZ Operating System - Terminal Portfolio       ║', delay: 100, className: 'header' },
+      { text: '║           Full-Stack Developer | ' + DATA.stats.totalRepos + ' GitHub Repos           ║', delay: 100, className: 'header' },
+      { text: '║                Welcome to Loocist23 Terminal               ║', delay: 100, className: 'header' },
+      { text: '║                                                            ║', delay: 50, className: '' },
       { text: '╚════════════════════════════════════════════════════════════╝', delay: 100, className: '' },
       { text: '', delay: 500, className: '' },
       { text: 'System ready. ' + DATA.stats.totalRepos + ' projects loaded.', delay: 200, className: 'success' },
       { text: 'Type "help" for available commands.', delay: 200, className: 'info' }
     ];
-    
+
     let cumulativeDelay = 0;
     bootLines.forEach((line, index) => {
       setTimeout(() => {
         print(line.text, line.className, false);
-        
+
         if (index === bootLines.length - 1) {
           setTimeout(() => {
             setIsBooting(false);
@@ -259,80 +261,81 @@ export default function TerminalPortfolio() {
       cumulativeDelay += line.delay;
     });
   }, [print]);
-  
+
   // Handle command
   const handleCommand = useCallback((e) => {
     if (e.key === 'Enter') {
+      if (isHandlingCommand.current) return;
+      isHandlingCommand.current = true;
       e.preventDefault();
       const input = commandInput.trim();
-      
+
       if (input === '') {
         setCommandInput('');
+        isHandlingCommand.current = false;
         return;
       }
-      
+
       // Add to history
       const newHistory = [...history, input];
       setHistory(newHistory);
       setHistoryIndex(newHistory.length);
-      
+
       // Print command
       print(getPrompt() + input);
       setCommandInput('');
-      
+
       // Check easter eggs first
       const egg = EASTER_EGGS.find(ee => input.toLowerCase() === ee.trigger);
       if (egg) {
         print(egg.response, 'success');
+        isHandlingCommand.current = false;
         return;
       }
-      
+
       // Parse command
       const parts = input.split(' ');
       const command = parts[0].toLowerCase();
       const args = parts.slice(1);
-      
+
       // Execute command
       switch(command) {
         case 'help':
-          setHelpCount(prev => {
-            const newCount = prev + 1;
-            print('Dev\'AZ OS v2.1 - Available Commands:', 'header');
-            print('');
-            const cmdList = [
-              { cmd: 'help', desc: 'Display this help message' },
-              { cmd: 'whoami', desc: 'Show current user identity' },
-              { cmd: 'about', desc: 'Display detailed information about Loocist23' },
-              { cmd: 'github', desc: 'Show GitHub statistics and profile info' },
-              { cmd: 'skills', desc: 'List all skills and technologies' },
-              { cmd: 'projects', desc: 'List all ' + DATA.projects.length + ' featured projects' },
-              { cmd: 'project <id>', desc: 'Show details of a specific project (1-' + DATA.projects.length + ')' },
-              { cmd: 'featured', desc: 'Show featured project (CyberSec Platform)' },
-              { cmd: 'contact', desc: 'Display contact information' },
-              { cmd: 'services', desc: 'List available professional services' },
-              { cmd: 'legal', desc: 'Display legal information' },
-              { cmd: 'neofetch', desc: 'Display system information with ASCII art' },
-              { cmd: 'clear', desc: 'Clear the terminal screen' },
-              { cmd: 'exit', desc: 'Exit the terminal (reload page)' },
-              { cmd: 'date', desc: 'Show current date and time' },
-              { cmd: 'echo <text>', desc: 'Display custom text' },
-              { cmd: 'languages', desc: 'List all programming languages used' }
-            ];
-            
-            cmdList.forEach(item => {
-              print(`  <span class="info">${item.cmd.padEnd(15)}</span> ${item.desc}`);
-            });
-            print('');
-            
-            // Show easter eggs hint after 3 help commands
-            if (newCount >= 3) {
-              showEasterEggsHint();
-            }
-            
-            return newCount;
+          const newHelpCount = helpCount + 1;
+          setHelpCount(newHelpCount);
+          print('Dev\'AZ OS v2.1 - Available Commands:', 'header');
+          print('');
+          const cmdList = [
+            { cmd: 'help', desc: 'Display this help message' },
+            { cmd: 'whoami', desc: 'Show current user identity' },
+            { cmd: 'about', desc: 'Display detailed information about Loocist23' },
+            { cmd: 'github', desc: 'Show GitHub statistics and profile info' },
+            { cmd: 'skills', desc: 'List all skills and technologies' },
+            { cmd: 'projects', desc: 'List all ' + DATA.projects.length + ' featured projects' },
+            { cmd: 'project <id>', desc: '    Show details of a specific project (1-' + DATA.projects.length + ')' },
+            { cmd: 'featured', desc: 'Show featured project (CyberSec Platform)' },
+            { cmd: 'contact', desc: 'Display contact information' },
+            { cmd: 'services', desc: 'List available professional services' },
+            { cmd: 'legal', desc: 'Display legal information' },
+            { cmd: 'neofetch', desc: 'Display system information with ASCII art' },
+            { cmd: 'clear', desc: 'Clear the terminal screen' },
+            { cmd: 'exit', desc: 'Exit the terminal (reload page)' },
+            { cmd: 'date', desc: 'Show current date and time' },
+            { cmd: 'echo <text>', desc: '      Display custom text' },
+            { cmd: 'languages', desc: 'List all programming languages used' }
+          ];
+
+          cmdList.forEach(item => {
+            print(`  <span class="info">${item.cmd.padEnd(15)}</span> ${item.desc}`);
           });
+          print('');
+
+          // Show easter eggs hint after 3 help commands
+          if (newHelpCount >= 3) {
+            showEasterEggsHint();
+          }
           break;
-          
+
         case 'whoami':
           print('┌─────────────────────────────────────────────────────────────────┐', 'header');
           print(`│ User:    <span class="accent-cyan">${DATA.identity.name}</span>`, '');
@@ -343,7 +346,7 @@ export default function TerminalPortfolio() {
           print(`│ Status:  <span class="success">Available for freelance missions</span>`, '');
           print('└─────────────────────────────────────────────────────────────────┘', 'header');
           break;
-          
+
         case 'about':
           print(DATA.identity.name, 'header');
           print('─'.repeat(DATA.identity.name.length), 'divider');
@@ -355,9 +358,9 @@ export default function TerminalPortfolio() {
           print('');
           print('"' + DATA.about.intro + '"');
           print('');
-          print('🎯 Mission: ' + DATA.about.objective, 'success');
+          print('Mission: ' + DATA.about.objective, 'success');
           break;
-          
+
         case 'github':
           print('═══════════════════════════════════════════════════════════', 'header');
           print('                      GITHUB PROFILE STATS', 'header');
@@ -371,35 +374,35 @@ export default function TerminalPortfolio() {
           print('');
           print('GitHub Profile: <a href="' + DATA.contact.github + '" target="_blank" class="contact-link">' + DATA.contact.github + '</a>');
           break;
-          
+
         case 'skills':
           print('═══════════════════════════════════════════════════════════', 'header');
           print('                    SKILL SET & TECHNOLOGIES', 'header');
           print('═══════════════════════════════════════════════════════════', 'header');
           print('');
-          
+
           const categories = [
-            { name: '🌐 Frontend', items: DATA.about.frontend },
-            { name: '🏗️ Backend', items: DATA.about.backend },
-            { name: '📱 Mobile', items: DATA.about.mobile },
-            { name: '💻 Desktop', items: DATA.about.desktop },
-            { name: '🤖 AI/ML', items: DATA.about.ai },
-            { name: '📜 Scripting', items: DATA.about.scripting },
-            { name: '🗄️ Databases', items: DATA.about.database },
-            { name: '☁️ DevOps/Cloud', items: [...DATA.about.devops, ...DATA.about.cloud] },
-            { name: '🔧 Tools', items: DATA.about.tools }
+            { name: 'Frontend', items: DATA.about.frontend },
+            { name: 'Backend', items: DATA.about.backend },
+            { name: 'Mobile', items: DATA.about.mobile },
+            { name: 'Desktop', items: DATA.about.desktop },
+            { name: 'AI/ML', items: DATA.about.ai },
+            { name: 'Scripting', items: DATA.about.scripting },
+            { name: 'Databases', items: DATA.about.database },
+            { name: 'DevOps/Cloud', items: [...DATA.about.devops, ...DATA.about.cloud] },
+            { name: 'Tools', items: DATA.about.tools }
           ];
-          
+
           categories.forEach(cat => {
             print(`${cat.name}:`, 'accent-cyan');
             const tags = cat.items.map(item => `<span class="skill-tag">${item}</span>`).join('');
             print(tags);
             print('');
           });
-          
-          print('💡 Proficient in ' + DATA.stats.mainLanguages.length + '+ programming languages across ' + DATA.stats.totalRepos + ' repositories', 'success');
+
+          print('Proficient in ' + DATA.stats.mainLanguages.length + '+ programming languages across ' + DATA.stats.totalRepos + ' repositories', 'success');
           break;
-          
+
         case 'languages':
           print('Programming Languages Used:', 'header');
           print('');
@@ -409,13 +412,13 @@ export default function TerminalPortfolio() {
           print('');
           print('Total: ' + DATA.stats.mainLanguages.length + ' languages across ' + DATA.stats.totalRepos + ' repositories', 'info');
           break;
-          
+
         case 'projects':
           print('═══════════════════════════════════════════════════════════', 'header');
           print('                      FEATURED PROJECTS (' + DATA.projects.length + ')', 'header');
           print('═══════════════════════════════════════════════════════════', 'header');
           print('');
-          
+
           DATA.projects.forEach((project) => {
             const highlight = project.highlight ? '<span class="success">★ </span>' : '';
             const year = project.year ? ` <span class="text-secondary">(${project.year})</span>` : '';
@@ -425,26 +428,26 @@ export default function TerminalPortfolio() {
             print(`   └─ <a href="${project.link}" target="_blank" class="contact-link">${project.link}</a>`);
             print('');
           });
-          
+
           print('Type "project <id>" for details. Try "featured" for the CyberSec Platform!', 'info');
           break;
-          
+
         case 'project':
           if (!args[0]) {
             print('Usage: project <id> (1-' + DATA.projects.length + ')', 'error');
             break;
           }
-          
+
           const id = parseInt(args[0]);
           if (isNaN(id) || id < 1 || id > DATA.projects.length) {
             print(`Error: Project ID must be between 1 and ${DATA.projects.length}`, 'error');
             break;
           }
-          
+
           const project = DATA.projects[id - 1];
           const highlight = project.highlight ? '<span class="success">★ Featured Project</span>' : '';
           const year = project.year ? ` | ${project.year}` : '';
-          
+
           print('═══════════════════════════════════════════════════════════', 'header');
           print(`  ${project.emoji} ${project.name} ${highlight}${year}`, 'header');
           print('═══════════════════════════════════════════════════════════', 'header');
@@ -455,7 +458,7 @@ export default function TerminalPortfolio() {
           print(`Repository: <a href="${project.link}" target="_blank" class="contact-link">${project.link}</a>`);
           print('');
           break;
-          
+
         case 'featured':
           const p = DATA.featuredProject;
           print('═══════════════════════════════════════════════════════════', 'header');
@@ -467,12 +470,12 @@ export default function TerminalPortfolio() {
           print('');
           print(p.description);
           print('');
-          print(`🔧 Technologies: ${p.stack}`, 'info');
-          print(`🌐 Repository: <a href="${p.link}" target="_blank" class="contact-link">${p.link}</a>`);
+          print(`Technologies: ${p.stack}`, 'info');
+          print(`Repository: <a href="${p.link}" target="_blank" class="contact-link">${p.link}</a>`);
           print('');
           print('This is the most recent and technically advanced project.', 'success');
           break;
-          
+
         case 'contact':
           print('═══════════════════════════════════════════════════════════', 'header');
           print('                     CONTACT INFORMATION', 'header');
@@ -480,14 +483,14 @@ export default function TerminalPortfolio() {
           print('');
           print(DATA.contact.message);
           print('');
-          print('📧 Email:   ' + DATA.contact.email, 'accent-cyan');
-          print('🔗 LinkedIn: <a href="' + DATA.contact.linkedin + '" target="_blank" class="contact-link">' + DATA.contact.linkedin + '</a>');
-          print('💻 GitHub:   <a href="' + DATA.contact.github + '" target="_blank" class="contact-link">' + DATA.contact.github + '</a>');
+          print('Email:   ' + DATA.contact.email, 'accent-cyan');
+          print('LinkedIn: <a href="' + DATA.contact.linkedin + '" target="_blank" class="contact-link">' + DATA.contact.linkedin + '</a>');
+          print('GitHub:   <a href="' + DATA.contact.github + '" target="_blank" class="contact-link">' + DATA.contact.github + '</a>');
           print('');
-          print('✅ Open for: Freelance missions | Full-time opportunities | Technical consulting', 'success');
-          print('✅ Specialties: Full-Stack Development | AI Integration | System Automation', 'success');
+          print('Open for: Freelance missions | Full-time opportunities | Technical consulting', 'success');
+          print('Specialties: Full-Stack Development | AI Integration | System Automation', 'success');
           break;
-          
+
         case 'services':
           print('Professional Services:', 'header');
           print('');
@@ -497,7 +500,7 @@ export default function TerminalPortfolio() {
           print('');
           print('Need something custom? Let\'s discuss your project!', 'info');
           break;
-          
+
         case 'legal':
           print('═══════════════════════════════════════════════════════════', 'header');
           print('                      LEGAL INFORMATION', 'header');
@@ -513,7 +516,7 @@ export default function TerminalPortfolio() {
           print('');
           print(DATA.legal.copyright);
           break;
-          
+
         case 'neofetch':
           const ascii = `  ██████╗ ██████╗ ███████╗██╗  ██╗
  ██╔═══██╗██╔══██╗██╔════╝██║ ██╔╝
@@ -536,11 +539,11 @@ export default function TerminalPortfolio() {
           print('Shell: /bin/dev-az', 'info');
           print('Uptime: Since 2025', 'info');
           break;
-          
+
         case 'clear':
           clearTerminal();
           break;
-          
+
         case 'exit':
           print('Logging out...', 'warning');
           print('');
@@ -548,13 +551,13 @@ export default function TerminalPortfolio() {
             window.location.reload();
           }, 500);
           break;
-          
+
         case 'date':
           const now = new Date();
-          const options = { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
+          const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
             day: 'numeric',
             hour: '2-digit',
             minute: '2-digit',
@@ -562,7 +565,7 @@ export default function TerminalPortfolio() {
           };
           print(now.toLocaleDateString('fr-FR', options), 'info');
           break;
-          
+
         case 'echo':
           if (args.length > 0) {
             print(args.join(' '));
@@ -570,35 +573,36 @@ export default function TerminalPortfolio() {
             print('Usage: echo <text>', 'error');
           }
           break;
-          
+
         default:
           print(`Command not found: ${command}`, 'error');
           print('Type "help" for available commands.', 'info');
       }
+      isHandlingCommand.current = false;
     }
   }, [commandInput, history, historyIndex, print, clearTerminal, getPrompt, showEasterEggsHint, helpCount]);
-  
+
   // Handle keyboard events
   const handleKeyDown = useCallback((e) => {
     // Handle Enter
     if (e.key === 'Enter') {
       handleCommand(e);
     }
-    
+
     // Handle Up Arrow (history)
     if (e.key === 'ArrowUp' && historyIndex > 0) {
       e.preventDefault();
       setHistoryIndex(prev => prev - 1);
       setCommandInput(history[historyIndex - 1]);
     }
-    
+
     // Handle Down Arrow (history)
     if (e.key === 'ArrowDown' && historyIndex < history.length - 1) {
       e.preventDefault();
       setHistoryIndex(prev => prev + 1);
       setCommandInput(history[historyIndex + 1]);
     }
-    
+
     // Handle Tab (auto-complete)
     if (e.key === 'Tab') {
       e.preventDefault();
@@ -609,7 +613,7 @@ export default function TerminalPortfolio() {
         'date', 'echo', 'languages'
       ];
       const matching = availableCommands.filter(cmd => cmd.startsWith(input));
-      
+
       if (matching.length === 1) {
         setCommandInput(matching[0]);
       } else if (matching.length > 1) {
@@ -620,19 +624,22 @@ export default function TerminalPortfolio() {
       }
     }
   }, [commandInput, history, historyIndex, print, handleCommand]);
-  
+
   // Initialize on mount
   useEffect(() => {
-    runBootSequence();
+    if (!bootDone.current) {
+      bootDone.current = true;
+      runBootSequence();
+    }
   }, []);
-  
+
   // Render output lines
   const renderOutput = () => {
     return outputLines.map((line, index) => (
       <div key={index} className={line.className} dangerouslySetInnerHTML={{ __html: line.text }} />
     ));
   };
-  
+
   return (
     <div id="terminal">
       <div id="output" ref={outputRef}>
@@ -658,4 +665,4 @@ export default function TerminalPortfolio() {
   );
 }
 
-export { TerminalPortfolio as default };
+
