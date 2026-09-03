@@ -153,17 +153,22 @@ const EASTER_EGGS = [
   { trigger: 'python', response: 'Python is one of my main languages! Used in: PowerAudit, FakeInfo-Filler, Echo Assistant, IoT projects, and many scripts.' }
 ];
 
+interface OutputLine {
+  text: string;
+  className: string;
+}
+
 export default function TerminalPortfolio() {
-  const [outputLines, setOutputLines] = useState([]);
+  const [outputLines, setOutputLines] = useState<OutputLine[]>([]);
   const [commandInput, setCommandInput] = useState('');
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [helpCount, setHelpCount] = useState(0);
   const [isBooting, setIsBooting] = useState(true);
   const [showCursor, setShowCursor] = useState(false);
 
-  const outputRef = useRef(null);
-  const inputRef = useRef(null);
+  const outputRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const bootDone = useRef(false);
   const isHandlingCommand = useRef(false);
 
@@ -179,7 +184,7 @@ export default function TerminalPortfolio() {
   }, [outputLines]);
 
   // Print to terminal
-  const print = useCallback((text, className = '', newline = true) => {
+  const print = useCallback((text: string, className: string = '', newline: boolean = true) => {
     setOutputLines(prev => {
       const newLines = [...prev];
       if (className) {
@@ -263,7 +268,7 @@ export default function TerminalPortfolio() {
   }, [print]);
 
   // Handle command
-  const handleCommand = useCallback((e) => {
+  const handleCommand = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       if (isHandlingCommand.current) return;
       isHandlingCommand.current = true;
@@ -554,7 +559,7 @@ export default function TerminalPortfolio() {
 
         case 'date':
           const now = new Date();
-          const options = {
+          const options: Intl.DateTimeFormatOptions = {
             weekday: 'long',
             year: 'numeric',
             month: 'long',
@@ -583,7 +588,7 @@ export default function TerminalPortfolio() {
   }, [commandInput, history, historyIndex, print, clearTerminal, getPrompt, showEasterEggsHint, helpCount]);
 
   // Handle keyboard events
-  const handleKeyDown = useCallback((e) => {
+  const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
     // Handle Enter
     if (e.key === 'Enter') {
       handleCommand(e);
