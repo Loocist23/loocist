@@ -3,11 +3,13 @@ node_modules/
 .pnp
 .pnp.js
 
-# Build outputs
-dist/
-build/
+# Next.js
 .next/
 out/
+
+# Production
+build/
+dist/
 
 # Logs
 logs/
